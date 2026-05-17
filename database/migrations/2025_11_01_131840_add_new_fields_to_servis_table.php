@@ -17,9 +17,9 @@ return new class extends Migration {
             }
 
             // Rename keterangan jadi kelengkapan
-            if (Schema::hasColumn('servis', 'keterangan')) {
+            if (Schema::hasColumn('servis', 'keterangan') && !Schema::hasColumn('servis', 'kelengkapan')) {
                 $table->renameColumn('keterangan', 'kelengkapan');
-            } else {
+            } elseif (!Schema::hasColumn('servis', 'kelengkapan')) {
                 $table->text('kelengkapan')->nullable()->after('keluhan');
             }
 

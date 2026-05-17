@@ -551,6 +551,7 @@
                     subtotal: item.subtotal
                 })),
                 total: parseFloat(document.getElementById('totalAmount').textContent.replace(/\./g, '')),
+                ongkir: parseFloat(document.getElementById('shippingCost').textContent.replace(/\./g, '')) || 0,
                 bayar: payment,
                 kembalian: payment - subTotal
             };

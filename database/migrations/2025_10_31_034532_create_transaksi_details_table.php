@@ -24,7 +24,7 @@ return new class extends Migration {
 
             $table->foreign('barang_id')
                 ->references('id')
-                ->on('barangs')
+                ->on('barang')
                 ->onDelete('restrict');
         });
     }

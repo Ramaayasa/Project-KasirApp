@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class BarangSeeder extends Seeder
 {
@@ -15,21 +16,25 @@ class BarangSeeder extends Seeder
         DB::table('barang')->insert([
             [
                 'kode_barang' => 'BRG001',
-                'nama_barang' => 'Keyboard Mechanical',
-                'kategori' => 'Elektronik',
-                'harga_beli' => 250000,
-                'harga_jual' => 350000,
+                'nama' => 'Keyboard Mechanical',
+                'kategori_id' => null,
+                'harga' => 350000,
+                'harga_modal' => 250000,
                 'stok' => 10,
+                'satuan' => 'pcs',
+                'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'kode_barang' => 'BRG002',
-                'nama_barang' => 'Mouse Wireless',
-                'kategori' => 'Elektronik',
-                'harga_beli' => 100000,
-                'harga_jual' => 150000,
+                'nama' => 'Mouse Wireless',
+                'kategori_id' => null,
+                'harga' => 150000,
+                'harga_modal' => 100000,
                 'stok' => 20,
+                'satuan' => 'pcs',
+                'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

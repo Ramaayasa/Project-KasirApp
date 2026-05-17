@@ -109,6 +109,7 @@ class KasirController extends Controller
                 'items.*.harga' => 'required|numeric|min:0',
                 'items.*.subtotal' => 'required|numeric|min:0',
                 'total' => 'required|numeric|min:0',
+                'ongkir' => 'nullable|numeric|min:0',
                 'bayar' => 'required|numeric|min:0',
                 'kembalian' => 'required|numeric|min:0'
             ]);
@@ -122,6 +123,7 @@ class KasirController extends Controller
                 'total' => $request->total,
                 'bayar' => $request->bayar,
                 'kembalian' => $request->kembalian,
+                'ongkir' => $request->ongkir ?? 0,
                 'status' => 'selesai'
             ]);
 
