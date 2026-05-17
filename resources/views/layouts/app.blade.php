@@ -256,7 +256,8 @@
             </button>
 
             <a class="navbar-brand" href="{{ url('/') }}">
-                <i class="bi bi-building"></i>
+                <img src="{{ asset('images/ganeshalogo.png') }}" height="35" width="35" alt="Logo"
+                    style="margin-right: 8px; border-radius: 50%; object-fit: cover;">
                 Ganesha Computer
             </a>
 
@@ -316,7 +317,7 @@
             <li class="menu-item">
                 <a href="{{ route('kasir.index') }}"
                     class="menu-link {{ request()->routeIs('kasir.*') ? 'active' : '' }}">
-                    <i class="bi bi-cash-register"></i>
+                    <i class="bi bi-cart"></i>
                     Kasir
                 </a>
             </li>
